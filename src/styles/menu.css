@@ -1,0 +1,56 @@
+.menu-container {
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin: 15px 0;
+}
+
+.categories button {
+  background: #eee;
+  color: #333;
+  border-radius: 20px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+.categories .active {
+  background: var(--primary);
+  color: white;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.product-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info p {
+  color: var(--primary);
+  font-weight: bold;
+}

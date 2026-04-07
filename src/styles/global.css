@@ -1,0 +1,33 @@
+:root {
+  --primary: #ff7a00;
+  --bg: #f6f6f6;
+  --text: #222;
+  --gray: #777;
+  --card: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
