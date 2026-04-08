@@ -1,0 +1,30 @@
+.toast {
+  position: fixed;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: black;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  animation: fade 2s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

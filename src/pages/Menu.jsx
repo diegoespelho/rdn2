@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
 import Skeleton from "../components/Skeleton";
+import BackButton from "../components/BackButton";
 import "../styles/menu.css";
 
 function Menu() {
@@ -9,20 +12,24 @@ function Menu() {
   const [category, setCategory] = useState("Todos");
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 800);
   }, []);
 
-  const categories = ["Todos", "Lanches", "Pratos", "Bebidas", "Sobremesas"];
-
-  const filtered =
+  // 🔥 FILTRO
+  const filteredProducts =
     category === "Todos"
       ? products
       : products.filter(p => p.category === category);
 
+  const categories = ["Todos", "Pratos", "Bebidas", "Sobremesas"];
+
   return (
     <div className="menu-container">
+      <BackButton />
+
       <h1>Cardápio</h1>
 
+      {/* 🍔 BOTÕES DE CATEGORIA */}
       <div className="categories">
         {categories.map(cat => (
           <button
@@ -34,11 +41,11 @@ function Menu() {
         ))}
       </div>
 
-      <div className="product-list">
+      <motion.div className="product-list">
         {loading
-          ? Array.from({ length: 4 }).map((_, i) => <Skeleton key={i} />)
-          : filtered.map(p => <ProductCard key={p.id} product={p} />)}
-      </div>
+          ? Array.from({ length: 6 }).map((_, i) => <Skeleton key={i} />)
+          : filteredProducts.map(p => <ProductCard key={p.id} product={p} />)}
+      </motion.div>
     </div>
   );
 }

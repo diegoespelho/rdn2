@@ -8,6 +8,7 @@ import Status from "../pages/Status";
 import Loyalty from "../pages/Loyalty";
 import Header from "../components/Header";
 import BottomNav from "../components/BottomNav";
+import FloatingCart from "../components/FloatingCart";
 
 function AppRoutes() {
   return (
@@ -24,6 +25,7 @@ function AppRoutes() {
         <Route path="/loyalty" element={<Loyalty />} />
       </Routes>
 
+      <FloatingCart />
       <BottomNav />
     </BrowserRouter>
   );

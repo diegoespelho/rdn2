@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackButton from "../components/BackButton";
 
 function Status() {
   const [status, setStatus] = useState("preparing");
@@ -27,6 +28,7 @@ function Status() {
 
   return (
     <div style={{ padding: "20px", textAlign: "center" }}>
+      <BackButton />
       <h1>🎉 Pedido Confirmado!</h1>
       <p>Obrigado pela sua compra 🙌</p>
 

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 import "../styles/checkout.css";
+import BackButton from "../components/BackButton"
 
 function Checkout() {
   const { cart, addPoints, clearCart } = useContext(AppContext);
@@ -36,6 +37,7 @@ function Checkout() {
 
   return (
     <div className="checkout-container">
+      <BackButton />
       <h1>Checkout</h1>
 
       <div className="form">

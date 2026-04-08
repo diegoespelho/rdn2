@@ -11,7 +11,10 @@ function Header() {
 
   return (
     <header className="header">
-      <h2>Raízes</h2>
+      {/* 👇 AGORA É CLICÁVEL */}
+      <Link to="/" className="logo">
+        <h2>Raízes</h2>
+      </Link>
 
       <div className="header-right">
         <Link to="/loyalty" className="points">

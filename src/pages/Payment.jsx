@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import BackButton from "../components/BackButton"
 
 function Payment() {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ function Payment() {
 
   return (
     <div style={{ padding: "20px" }}>
+      <BackButton />
       <h1>Processando pagamento...</h1>
       <p>Aguarde...</p>
     </div>

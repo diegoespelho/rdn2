@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import "../styles/cart.css";
 import { Link } from "react-router-dom";
+import BackButton from "../components/BackButton"
 
 function Cart() {
   const { cart, removeFromCart } = useContext(AppContext);
@@ -10,6 +11,7 @@ function Cart() {
 
   return (
     <div className="cart-container">
+      <BackButton />
       <h1>Carrinho</h1>
 
       {cart.length === 0 ? (

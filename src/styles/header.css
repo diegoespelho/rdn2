@@ -37,3 +37,8 @@
   color: var(--gray);
   text-decoration: none;
 }
+
+.logo {
+  text-decoration: none;
+  color: var(--primary);
+}
