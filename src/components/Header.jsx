@@ -11,9 +11,8 @@ function Header() {
 
   return (
     <header className="header">
-      {/* 👇 AGORA É CLICÁVEL */}
       <Link to="/" className="logo">
-        <h2>Raízes</h2>
+        <h2>Raízes do Nordeste</h2>
       </Link>
 
       <div className="header-right">
